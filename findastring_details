@@ -1,0 +1,52 @@
+1 def count_substring(string, sub_string):
+2     count = 0
+3     sl = len(string)
+4     ssl = len(sub_string)
+5     for i in range(0, sl - ssl + 1):
+6         if string[i:i + ssl] == sub_string:
+7             count += 1
+8     return count
+9 
+10 if __name__ == '__main__':
+11     string = input().strip()
+12     sub_string = input().strip()
+13 
+14     count = count_substring(string, sub_string)
+15     print(count)
+
+string = 'teststring'
+sl = len(string)
+sub_string = 'st'
+ssl = len(sub_string)
+range(0, sl-ssl+1) # corresponds to line 5
+range(0, 9) # Output from line 5 based on string
+
+# Follows slicing format string[start:stop]
+# Remember the stop index means 'Up to but no include'
+# the start number and what gets added to ssl to shif the index would be
+# 'i' or item in a for loop through the length of the string 
+# 0 + ssl = 0 indext up to but not include index 2
+# teststring
+# 0123456789
+# 0 + ssl = 2 so only include 0 to 1 or 'te'
+
+string[0:0+ssl]
+'te'
+string[1:1+ssl]
+'es'
+string[2:2+ssl]
+'st'
+string[3:3+ssl]
+'ts'
+string[4:4+ssl]
+'st'
+string[5:5+ssl]
+'tr'
+string[6:6+ssl]
+'ri'
+string[7:7+ssl]
+'in'
+string[8:8+ssl]
+'ng'
+>>> string[9:9+ssl]
+'g'

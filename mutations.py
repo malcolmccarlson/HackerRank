@@ -2,9 +2,7 @@ import string
 
 
 def mutate_string(string, position, character):
-    charList = []
-    for item in string:
-        charList.append(item)
+    charList = [item for item in string]
     charList.pop(position)
     charList.insert(position, character)
     return ''.join(charList)
